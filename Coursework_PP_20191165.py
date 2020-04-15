@@ -1,17 +1,26 @@
 #Course work_Lakshan
 #Student Version
 
-exit=1
-if exit==1:
-    while exit==1:
-        id= input('Enter your Student ID: ')
-        try:
-            p = int(input('PASSED CREDITS: ') or "0")
-            d = int(input('DEFERED CREDITS: ') or "0")
-            f = int(input('FAILED CREDITS: ') or "0")
-            
-            if (p+d+f)==120:
-                exit=0
+end=1
+listrange = 0
+list = [0, 20, 40, 60, 80, 100, 120]
+
+while end==1:
+    id= input('Please enter the Student ID: ')
+
+    try:   # Check whether the inputs are integers
+        p = int(input('PASSED CREDITS: ') or "0")
+        d = int(input('DEFERED CREDITS: ') or "0")
+        f = int(input('FAILED CREDITS: ') or "0")
+#Check whether the inputs are in range
+        if p in list:
+            if d in list:
+                if f in list:
+                    listrange = 1
+        if (1 == listrange):
+
+            if (p+d+f)==120:  #Check whether the total is correct
+                end=0
                 if (p==120 and d==0 and f==0):
                     print ('Student ID:',id,'\n','Progress')
                 elif (p==100 and d==20 and f==0):
@@ -68,15 +77,16 @@ if exit==1:
                     print ('Student ID:',id,'\n','Exclude')
                 elif (p==0 and d==0 and f==120):
                     print ('Student ID:',id,'\n','Exclude')
-                else:
-                    print ('Range error')
             else:
-                print ('Total incorrect')
-        except:
-            print ('Integeer Required')
-        
-                
-                        
-                        
-                    
+                print ('Total Incorrect')
+        else:
+            print ('Range error')
+    except:
+        print ('Integeer Required')
+    
+    
             
+                    
+                    
+                
+        
