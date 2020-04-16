@@ -137,7 +137,43 @@ print ("\n Exclude \t",excludeCount,end =": ")
 for i in range(excludeCount):
     print("*", end ="")
 
-        
+ar = [progressCount, progModTrailCount, progNotRetrievCount, excludeCount]
+print ("\n \n Progress Trailing Retriever Exclude")
+for i in range(max(ar)):
+	if(progressCount > 0):
+		progressCount = progressCount - 1;
+		print("     *",end ="\t")
+	else:
+		print(" ",end ="\t")
+	if(progModTrailCount > 0):
+		progModTrailCount = progModTrailCount -1;
+		print("     *",end ="\t")
+	else:
+		print(" ",end ="\t")
+	if(progNotRetrievCount > 0):
+		progNotRetrievCount = progNotRetrievCount -1;
+		print("       *",end ="\t")
+	else:
+		print(" ",end ="\t")
+	if(excludeCount > 0):
+		excludeCount = excludeCount -1;
+		print("*",end ="\t")
+	else:
+		print(" ",end ="\t")
+	print("\n")
+
+
+#for x in range(progressCount):
+#    print("   *")
+#for x in range(progressCount):
+#    print("   *")  
+#for x in range(progressCount):
+#    print("   *")
+
+#progressCount = 0
+#progModTrailCount = 0
+#progNotRetrievCount = 0
+#excludeCount = 0
             
 
 
