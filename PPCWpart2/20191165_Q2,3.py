@@ -1,7 +1,11 @@
+# I declare that my work contains no examples of misconduct, such as plagiarism, or collusion. # Any code taken from other sources is referenced within my code solution.
+# Student ID: 20191165
+# Date: 17/04/2020
 #Programming Principles
 #Course Work
 #Staff Version
 
+# Part 2
 quitStatus = 1
 count = 0
 progressCount = 0
@@ -17,105 +21,107 @@ while "q" != quitStatus:
     while end==1:
         id= input('Please enter the Student ID: ')
 
-        try:   # Check whether the inputs are integers
-            p = int(input('PASSED CREDITS: ') or "0")
-            d = int(input('DEFERED CREDITS: ') or "0")
-            f = int(input('FAILED CREDITS: ') or "0")
+        # Check whether the inputs are integers
+        try:
+            passed = int(input('PASSED CREDITS: ') or "0")
+            defered = int(input('DEFERED CREDITS: ') or "0")
+            failed = int(input('FAILED CREDITS: ') or "0")
+
             #Check whether the inputs are in range
-            if p in list:
-                if d in list:
-                    if f in list:
+            if passed in list:
+                if defered in list:
+                    if failed in list:
                         listrange = 1
             if (1 == listrange):
 
-                if (p+d+f)==120:  #Check whether the total is correct
+                #Check whether the total is correct
+                if (passed+defered+failed)==120:
                     end=0
-                    if (p==120 and d==0 and f==0):
+                    if (passed==120 and defered==0 and failed==0):
                         print ('Student ID:',id,'\n','Progress')
                         progressCount=progressCount+1
-                    elif (p==100 and d==20 and f==0):
+                    elif (passed==100 and defered==20 and failed==0):
                         print ('Student ID:',id,'\n','Progress module-trailer')
                         progModTrailCount=progModTrailCount+1
-                    elif (p==100 and d==0 and f==20):
+                    elif (passed==100 and defered==0 and failed==20):
                         print ('Student ID:',id,'\n','Progress module-trailer')
                         progModTrailCount=progModTrailCount+1
-                    elif (p==80 and d==40 and f==0):
+                    elif (passed==80 and defered==40 and failed==0):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
                         progNotRetrievCount=progNotRetrievCount+1
-                    elif (p==80 and d==20 and f==20):
+                    elif (passed==80 and defered==20 and failed==20):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
                         progNotRetrievCount=progNotRetrievCount+1
-                    elif (p==80 and d==0 and f==40):
+                    elif (passed==80 and defered==0 and failed==40):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
                         progNotRetrievCount=progNotRetrievCount+1
-                    elif (p==60 and d==60 and f==0):
+                    elif (passed==60 and defered==60 and failed==0):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
                         progNotRetrievCount=progNotRetrievCount+1
-                    elif (p==60 and d==40 and f==20):
+                    elif (passed==60 and defered==40 and failed==20):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
                         progNotRetrievCount=progNotRetrievCount+1
-                    elif (p==60 and d==20 and f==40):
+                    elif (passed==60 and defered==20 and failed==40):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
                         progNotRetrievCount=progNotRetrievCount+1
-                    elif (p==60 and d==0 and f==60):
+                    elif (passed==60 and defered==0 and failed==60):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
                         progNotRetrievCount=progNotRetrievCount+1
-                    elif (p==40 and d==80 and f==0):
+                    elif (passed==40 and defered==80 and failed==0):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==40 and d==60 and f==20):
+                        progNotRetrievCounty=progNotRetrievCount+1
+                    elif (passed==40 and defered==60 and failed==20):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==40 and d==40 and f==40):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==40 and defered==40 and failed==40):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==40 and d==20 and f==60):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==40 and defered==20 and failed==60):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==40 and d==0 and f==80):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==40 and defered==0 and failed==80):
                         print ('Student ID:',id,'\n','Exclude')
                         excludeCount=excludeCount+1
-                    elif (p==20 and d==100 and f==0):
+                    elif (passed==20 and defered==100 and failed==0):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==20 and d==80 and f==20):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==20 and defered==80 and failed==20):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==20 and d==60 and f==40):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==20 and defered==60 and failed==40):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==20 and d==40 and f==60):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==20 and defered==40 and failed==60):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==20 and d==20 and f==80):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==20 and defered==20 and failed==80):
                         print ('Student ID:',id,'\n','Exclude')
                         excludeCount=excludeCount+1
-                    elif (p==20 and d==0 and f==100):
+                    elif (passed==20 and defered==0 and failed==100):
                         print ('Student ID:',id,'\n','Exclude')
                         excludeCount=excludeCount+1
-                    elif (p==0 and d==120 and f==0):
+                    elif (passed==0 and defered==120 and failed==0):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==0 and d==100 and f==20):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==0 and defered==100 and failed==20):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==0 and d==80 and f==40):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==0 and defered==80 and failed==40):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==0 and d==60 and f==60):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==0 and defered==60 and failed==60):
                         print ('Student ID:',id,'\n','Do not Progress – module retriever')
-                        y=y+1
-                    elif (p==0 and d==40 and f==80):
+                        progNotRetrievCount=progNotRetrievCount+1
+                    elif (passed==0 and defered==40 and failed==80):
                         print ('Student ID:',id,'\n','Exclude')
                         excludeCount=excludeCount+1
-                    elif (p==0 and d==20 and f==100):
+                    elif (passed==0 and defered==20 and failed==100):
                         print ('Student ID:',id,'\n','Exclude')
                         excludeCount=excludeCount+1
-                    elif (p==0 and d==0 and f==120):
+                    elif (passed==0 and defered==0 and failed==120):
                         print ('Student ID:',id,'\n','Exclude')
                         excludeCount=excludeCount+1
                     count = count + 1
-                    #print("count",count)
                 else:
                     print ('Total Incorrect')
             else:
@@ -124,6 +130,7 @@ while "q" != quitStatus:
             print ('Integeer Required')
     quitStatus = input("Press Enter to Continue / 'q' to Quit ")
 
+# Horizontal Histogram
 print ("\n Progress \t",progressCount,end =": ")
 for i in range(progressCount):
     print("*", end ="")
@@ -136,7 +143,11 @@ for i in range(progNotRetrievCount):
 print ("\n Exclude \t",excludeCount,end =": ")
 for i in range(excludeCount):
     print("*", end ="")
+print("\n\n Total: ", count)
 
+# Part 3
+
+# Vertical Histogram
 ar = [progressCount, progModTrailCount, progNotRetrievCount, excludeCount]
 print ("\n \n Progress Trailing Retriever Exclude")
 for i in range(max(ar)):
@@ -161,29 +172,3 @@ for i in range(max(ar)):
 	else:
 		print(" ",end ="\t")
 	print("\n")
-
-
-#for x in range(progressCount):
-#    print("   *")
-#for x in range(progressCount):
-#    print("   *")  
-#for x in range(progressCount):
-#    print("   *")
-
-#progressCount = 0
-#progModTrailCount = 0
-#progNotRetrievCount = 0
-#excludeCount = 0
-            
-
-
-    
-    
-    
-            
-                    
-                    
-                
-        
-
-    
